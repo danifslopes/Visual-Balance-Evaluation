@@ -5,21 +5,11 @@ let n = 0;
 
 let imgs = [];
 function preload() {
-  img = {img: loadImage("imgs/form5/3 - designers g5/6.png"), name: "" };
-  //img = loadImage("imgs/form1/1 - typo g1/2.jpg");
-
+//CREATE A FOLDER "IMGS" AN PLACE YOUR IMAGES INSIDE IT.
+  img = {img: loadImage("imgs/IMG-NAME.jpg"), name: "" };
  /* for(let i=0; i <5; i++) {
-    let form = "form"+ (i+1);
-
-    for(let j=0; j<4; j++) {
-      let folder = (j+1)+" - "+types[j] + " g"+(i+1);
-
-      for(let w=0; w<6; w++) {
-        let file = (w+1)+".png";
-        let img =  loadImage("imgs/"+form+"/"+folder+"/"+file);
-        imgs.push({img:img, name: "imgs/"+form+"/"+folder+"/"+file});
-      }
-    }
+        let img =  loadImage("imgs/img"+i+".jpg");
+        imgs.push({img:img, name: "imgs/img"+i+".jpg" });
   }*/
 
 }
@@ -45,6 +35,8 @@ function evaluateBalance(img, name) {
   let force = createVector();
 
   let isDark = false;
+
+  //V1
   /*let avgDarkness = 0;
   let count2 = 0;
   for (let y = 0; y < img.height; y++)
@@ -61,6 +53,7 @@ function evaluateBalance(img, name) {
   avgDarkness/=count2;
   isDark = avgDarkness > 127;*/
 
+  //V2
   for (let y = 0; y < img.height; y++)
     for (let x = 0; x < img.width; x++) {
       let index = (x + y * img.width) * 4,
