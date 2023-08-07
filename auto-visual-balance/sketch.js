@@ -106,7 +106,7 @@ function evaluateBalance(img, name) {
   let maxDistY = axisYCenter; //metade da height
 
   //SET FINAL AXES (FINIAL = CLOSER ONES)
-  /*if(balanceXLeft<balanceXCenter) { //se o eixo left for mais proximo
+  if(balanceXLeft<balanceXCenter) { //se o eixo left for mais proximo
     axisXName = "x_left";
     balanceX = balanceXLeft;
     maxDistX = img.width;
@@ -115,7 +115,7 @@ function evaluateBalance(img, name) {
     axisYName = "y_bottom";
     balanceY = balanceYBottom;
     maxDistY = img.height;
-  }*/
+  }
 
   //NORM
   balanceX = 1 - balanceX / maxDistX;
